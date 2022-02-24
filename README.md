@@ -1,2 +1,4 @@
 # DownloadOrganizer
-A python script that organize your download folders into multiple other folders.
+Script en python qui organise les fichiers du dossier de telechargement</br>
+<h1>Maintenance</h1>
+Ajout d'une interface qui laisse a l'utilisateur le choix du fichier a organiser, ainsi qu'un système de sauvegarde qui enregistre le fichier a organiser pour une plus grande faciliter d'utilisation.
