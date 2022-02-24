@@ -34,6 +34,14 @@ def ecrireJson(filepath):
     with open("save.json", "w") as outfile:
         outfile.write(json_object)
 
+def lireJson():
+    with open(getcwd()+"\\save.json", 'r') as openfile:
+        # Reading from json file
+        json_object = json.load(openfile)
+
+
+    valeur = list(json_object.values())[0]
+    return valeur
 
 
 root = Tk()
@@ -64,10 +72,13 @@ footer.grid(row=5,column=0)
 
 print(os.getenv('APPDATA'))
 
-if path.exists(os.getenv('APPDATA')+"\\DownloadOrganiser\\save.json"):
-    print("Fichier exist")
+if path.exists(getcwd()+"\\save.json"):
+    path = lireJson()
+    cheminText.config(text = path)
+    buttonOrganiser['state'] = NORMAL
+
 else: 
-    print("Fichier n'exist pas")
+    print("Pas de sauvegarde")
 
 
 
