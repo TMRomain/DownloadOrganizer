@@ -11,6 +11,7 @@ from CleanDownload import cleanUp
 def choisirPath():
     filename = fd.askdirectory()
     if filename !="":
+        ecrireJson(filename)
         cheminText.config(text = filename)
         buttonOrganiser['state'] = NORMAL
     else:
@@ -20,6 +21,20 @@ def choisirPath():
 def organiser():
     # print()
     cleanUp(cheminText.cget("text"))
+
+def ecrireJson(filepath):
+    dictionary ={
+        "filepath" : filepath,
+    }
+    
+    # Serializing json 
+    json_object = json.dumps(dictionary)
+    
+    # Writing to sample.json
+    with open("save.json", "w") as outfile:
+        outfile.write(json_object)
+
+
 
 root = Tk()
 
