@@ -7,7 +7,7 @@ class Dossier:
   def __init__(dossier, filename, extension):
     dossier.filename = filename
     dossier.extension = extension
-def cleanUp():
+def cleanUp(mypath):
     #Tout les fichier disponnible
     filetocreate=(
         Dossier("Dossiers",""),
@@ -22,7 +22,7 @@ def cleanUp():
 
     #mypath = raw_input("What is your file path :  ")
     #A enlever plus tard
-    mypath = 'C:\\Users\\1931553\\Downloads'
+    # mypath = 'C:\\Users\\1931553\\Downloads'
 
     onlyfolders = [x for x in listdir(mypath) if isdir(join(mypath, x))]
     onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
