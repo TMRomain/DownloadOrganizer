@@ -11,12 +11,12 @@ def cleanUp():
     #Tout les fichier disponnible
     filetocreate=(
         Dossier("Dossiers",""),
-        Dossier("Documents",(".docx",".pdf",".xlsx",".txt")),
+        Dossier("Documents",(".docx",".pdf",".xlsx",".txt",".ppt",".pptx")),
         Dossier("Archives",(".zip",".rar",".7z")),
         Dossier("Executables",(".exe",".msi")),
-        Dossier("Images",(".jpg",".png",".gif",".tif")),
+        Dossier("Images",(".jpg",".png",".gif",".tif",".jpeg")),
         Dossier("Medias",(".avi",".flv",".mov",".mp4")),
-        Dossier("Programation",(".html",".py",".css",".js",".svg",".xml",".cpp")),
+        Dossier("Programation",(".html",".py",".css",".js",".svg",".xml",".cpp",".md")),
         Dossier("Autres",""),
     )
 
